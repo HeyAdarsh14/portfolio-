@@ -29,6 +29,16 @@ const frontend = [
     value: 80,
     icon: CheckCircleIcon,
   },
+  {
+    name: "TypeScript",
+    value: 70,
+    icon: CheckCircleIcon,
+  },
+  {
+    name: "Vue.js",
+    value: 65,
+    icon: CheckCircleIcon,
+  },
 ];
 const backend = [
   {
@@ -61,6 +71,39 @@ const backend = [
     value: 30,
     icon: CheckCircleIcon,
   },
+  {
+    name: "Express.js",
+    value: 55,
+    icon: CheckCircleIcon,
+  },
+  {
+    name: "PostgreSQL",
+    value: 50,
+    icon: CheckCircleIcon,
+  },
+];
+
+const tools = [
+  {
+    name: "Git & GitHub",
+    value: 85,
+    icon: CheckCircleIcon,
+  },
+  {
+    name: "VS Code",
+    value: 90,
+    icon: CheckCircleIcon,
+  },
+  {
+    name: "Docker",
+    value: 45,
+    icon: CheckCircleIcon,
+  },
+  {
+    name: "Figma",
+    value: 60,
+    icon: CheckCircleIcon,
+  },
 ];
 
 export default function Skills() {
@@ -76,7 +119,7 @@ export default function Skills() {
             Skills
           </p>
         </div>
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-y-10">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3 lg:gap-y-10">
           <div
             className="mt-10 max-w-2xl sm:mt-10 lg:mt-10 lg:max-w-4xl bg-base-200 ring-2 ring-base-300 rounded-2xl p-5 shadow-xl"
             data-aos="zoom-in"
@@ -124,6 +167,33 @@ export default function Skills() {
                     <progress
                       className="progress w-3/4"
                       value={backend.value}
+                      max="100"
+                    ></progress>
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+          <div
+            className="mt-10 max-w-2xl sm:mt-10 lg:mt-10 lg:max-w-4xl bg-base-200 ring-2 ring-base-300 rounded-2xl p-5 shadow-xl"
+            data-aos="zoom-in"
+          >
+            <p className="text-2xl text-center font-bold mb-6">
+              Tools & Technologies
+            </p>
+            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-6 lg:max-w-none lg:grid-cols-2 lg:gap-y-6">
+              {tools.map((tool) => (
+                <div key={tool.name} className="relative pl-16">
+                  <dt className="text-base font-semibold leading-7">
+                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                      <tool.icon className="h-6 w-6" aria-hidden="true" />
+                    </div>
+                    {tool.name}
+                  </dt>
+                  <dd className="mt-2 text-base leading-7">
+                    <progress
+                      className="progress w-3/4"
+                      value={tool.value}
                       max="100"
                     ></progress>
                   </dd>
