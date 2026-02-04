@@ -14,6 +14,9 @@ export default function Contact() {
           <p className="mt-2 text-4xl font-bold tracking-tight sm:text-6xl">
             Contact Me
           </p>
+          <p className="mt-6 text-lg leading-8 text-base-content/70">
+            Have a question or want to work together? I'd love to hear from you! Drop me a message and I'll get back to you as soon as possible.
+          </p>
         </div>
         <form
           action=""
