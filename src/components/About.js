@@ -24,13 +24,16 @@ export default function About() {
                 About Me
               </p>
               <p className="mt-6 text-lg leading-8" data-aos="fade-right">
-                I'm Adarsh Gupta, a software engineer with strong fundamentals in data structures and algorithms and hands-on experience in full-stack and backend development. I enjoy building real-world applications that prioritize clean architecture, reliability, and long-term maintainability.
+                I'm <span className="font-bold text-primary">Adarsh Gupta</span>, a passionate software engineer with strong fundamentals in data structures and algorithms and hands-on experience in full-stack and backend development. I enjoy building real-world applications that prioritize clean architecture, reliability, and long-term maintainability.
               </p>
               <p className="mt-6 text-lg leading-8" data-aos="fade-right">
-                During my internship experience, I worked on a production-level application deployed on the Google Play Store with over 10,000 downloads, contributing to backend services, REST APIs, and frontend integration. This experience helped me understand real-world challenges such as system consistency, error handling, and delivering features used by real users.
+                During my internship experience, I worked on a <span className="font-semibold">production-level application</span> deployed on the Google Play Store with over <span className="font-semibold text-accent">10,000+ downloads</span>, contributing to backend services, REST APIs, and frontend integration. This experience helped me understand real-world challenges such as system consistency, error handling, and delivering features used by real users.
               </p>
               <p className="mt-6 text-lg leading-8" data-aos="fade-right">
                 I continuously improve my problem-solving skills through DSA practice and enjoy participating in hackathons and collaborative projects. I'm driven by learning through building, refining system design, and growing as a well-rounded software engineer.
+              </p>
+              <p className="mt-6 text-base leading-7 text-base-content/70 italic" data-aos="fade-right">
+                "Code is like humor. When you have to explain it, it's bad." - Building intuitive solutions is my passion.
               </p>
             </div>
           </div>
