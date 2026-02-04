@@ -40,6 +40,15 @@ const projects = [
     used: "ThreeJS, TailwindCSS",
     description: "A personal portfolio website.",
   },
+  {
+    id: 5,
+    name: "E-Commerce Dashboard",
+    href: "https://github.com/HeyAdarsh14",
+    imageSrc:
+      "https://fastly.picsum.photos/id/180/2400/1600.jpg?hmac=Ig-CXcpINdSXp1NnyN7xWVv2tyNxpgNEXUb2xPTlCXs",
+    used: "React, Node.js, Express",
+    description: "Admin dashboard for e-commerce management.",
+  },
 ];
 
 export default function Projects() {
