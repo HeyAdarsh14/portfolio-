@@ -1,9 +1,23 @@
 # Adarsh Gupta – Software Engineer Portfolio
 
+[![React](https://img.shields.io/badge/React-18.0+-blue.svg)](https://reactjs.org/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0+-blue.svg)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 This repository contains the source code for my personal portfolio website.  
 The portfolio is designed to present my technical background, real-world project experience, and hands-on work as a software engineer.
 
 It reflects my focus on **practical application development, clean architecture, and problem-solving grounded in strong computer science fundamentals**.
+
+---
+
+## ✨ Features
+
+- **Responsive Design**: Fully responsive across all devices
+- **Modern UI/UX**: Built with React and styled using TailwindCSS and DaisyUI
+- **Smooth Animations**: AOS (Animate On Scroll) library for engaging transitions
+- **Dynamic Content**: Type animation effects for engaging hero section
+- **Dark/Light Theme**: Toggle between themes with persistent storage
 
 ---
 
