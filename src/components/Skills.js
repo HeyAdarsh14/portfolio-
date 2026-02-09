@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { CheckCircleIcon, ShieldCheckIcon } from "@heroicons/react/24/solid";
-import { CodeBracketIcon, ServerIcon, DevicePhoneMobileIcon, CircleStackIcon, WrenchScrewdriverIcon } from "@heroicons/react/24/outline";
+import { CodeBracketIcon, ServerIcon, CircleStackIcon, WrenchScrewdriverIcon } from "@heroicons/react/24/outline";
 import AOS from "aos";
 import "aos/dist/aos.css";
 

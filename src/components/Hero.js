@@ -20,14 +20,11 @@ const navigation = [
 ];
 
 export default function Hero() {
-  const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
-  );
   useEffect(() => {
+    const theme = localStorage.getItem("theme") || "light";
     localStorage.setItem("theme", theme);
-    const localTheme = localStorage.getItem("theme");
-    document.querySelector("html").setAttribute("data-theme", localTheme);
-  }, [theme]);
+    document.querySelector("html").setAttribute("data-theme", theme);
+  }, []);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   useEffect(() => {
     AOS.init({ duration: 2000 });

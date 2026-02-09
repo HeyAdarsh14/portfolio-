@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { TrophyIcon } from "@heroicons/react/24/solid";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
