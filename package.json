@@ -1,6 +1,19 @@
 {
-  "name": "react-portfolio",
+  "name": "adarsh-gupta-portfolio",
   "version": "0.1.0",
+  "description": "Personal portfolio website showcasing software engineering projects, experience, and technical skills built with React and TailwindCSS",
+  "keywords": [
+    "portfolio",
+    "react",
+    "tailwindcss",
+    "software-engineer",
+    "frontend",
+    "web-development",
+    "responsive-design",
+    "adarsh-gupta"
+  ],
+  "author": "Adarsh Gupta <adar3165@gmail.com>",
+  "homepage": "https://github.com/HeyAdarsh14",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.18",
