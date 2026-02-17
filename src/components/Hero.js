@@ -34,7 +34,7 @@ export default function Hero() {
       <header className="fixed bg-[#1e2530] shadow-2xl shadow-neutral inset-x-0 top-0 z-50">
         <nav
           className="flex items-center justify-between p-6 lg:px-8"
-          aria-label="Global"
+          aria-label="Main navigation"
         >
           <div className="flex lg:flex-1 items-center gap-3">
             <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
@@ -71,10 +71,18 @@ export default function Hero() {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-3">
-            <button onClick={() => window.open('https://github.com/HeyAdarsh14', '_blank')} className="px-4 py-2 border-2 border-purple-500 text-purple-400 rounded-full text-sm font-medium hover:bg-purple-500 hover:text-white transition-all duration-300">
+            <button 
+              onClick={() => window.open('https://github.com/HeyAdarsh14', '_blank')} 
+              className="px-4 py-2 border-2 border-purple-500 text-purple-400 rounded-full text-sm font-medium hover:bg-purple-500 hover:text-white transition-all duration-300"
+              aria-label="View GitHub profile (opens in new tab)"
+            >
               Github Profile
             </button>
-            <button onClick={() => window.open('https://codolio.com/profile/Heyadarsh', '_blank')} className="px-4 py-2 border-2 border-purple-500 text-purple-400 rounded-full text-sm font-medium hover:bg-purple-500 hover:text-white transition-all duration-300">
+            <button 
+              onClick={() => window.open('https://codolio.com/profile/Heyadarsh', '_blank')} 
+              className="px-4 py-2 border-2 border-purple-500 text-purple-400 rounded-full text-sm font-medium hover:bg-purple-500 hover:text-white transition-all duration-300"
+              aria-label="View coding profile on Codolio (opens in new tab)"
+            >
               Coding Profile
             </button>
           </div>
@@ -89,10 +97,18 @@ export default function Hero() {
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-2/3 overflow-y-auto bg-[#1e2530] px-6 py-6 sm:max-w-sm shadow-2xl">
             <div className="flex items-center justify-between">
               <div className="-m-1.5 p-1.5 flex gap-x-2">
-                <button onClick={() => window.open('https://github.com/HeyAdarsh14', '_blank')} className="px-3 py-1.5 border-2 border-purple-500 text-purple-400 rounded-full text-xs font-medium">
+                <button 
+                  onClick={() => window.open('https://github.com/HeyAdarsh14', '_blank')} 
+                  className="px-3 py-1.5 border-2 border-purple-500 text-purple-400 rounded-full text-xs font-medium"
+                  aria-label="GitHub profile"
+                >
                   Github Profile
                 </button>
-                <button onClick={() => window.open('https://codolio.com/profile/Heyadarsh', '_blank')} className="px-3 py-1.5 border-2 border-purple-500 text-purple-400 rounded-full text-xs font-medium">
+                <button 
+                  onClick={() => window.open('https://codolio.com/profile/Heyadarsh', '_blank')} 
+                  className="px-3 py-1.5 border-2 border-purple-500 text-purple-400 rounded-full text-xs font-medium"
+                  aria-label="Coding profile"
+                >
                   Coding Profile
                 </button>
               </div>
