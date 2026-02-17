@@ -28,7 +28,12 @@ export default function Contact() {
               <p className="text-xs uppercase tracking-wider text-gray-500 font-mono">COMMUNICATION STACK</p>
               
               {/* Email Card */}
-              <div className="bg-[#0f1419] border border-gray-800 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300 group">
+              <div 
+                className="bg-[#0f1419] border border-gray-800 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300 group"
+                role="button"
+                aria-label="Contact via email at adar3165@gmail.com"
+                tabIndex={0}
+              >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-purple-500/10 rounded-lg">
@@ -46,7 +51,12 @@ export default function Contact() {
               </div>
 
               {/* Location Card */}
-              <div className="bg-[#0f1419] border border-gray-800 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300 group">
+              <div 
+                className="bg-[#0f1419] border border-gray-800 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300 group"
+                role="button"
+                aria-label="Location: Delhi, India"
+                tabIndex={0}
+              >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-purple-500/10 rounded-lg">
@@ -72,6 +82,7 @@ export default function Contact() {
                   href="https://github.com/HeyAdarsh14" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  aria-label="Visit Adarsh's GitHub profile"
                   className="bg-[#0f1419] border border-gray-800 rounded-xl p-6 hover:border-white/30 transition-all duration-300 flex flex-col items-center justify-center gap-3 group"
                 >
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -83,6 +94,7 @@ export default function Contact() {
                   href="https://www.linkedin.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  aria-label="Visit Adarsh's LinkedIn profile"
                   className="bg-[#0f1419] border border-gray-800 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300 flex flex-col items-center justify-center gap-3 group"
                 >
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -94,6 +106,7 @@ export default function Contact() {
                   href="https://twitter.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  aria-label="Visit Adarsh's Twitter profile"
                   className="bg-[#0f1419] border border-gray-800 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300 flex flex-col items-center justify-center gap-3 group"
                 >
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -112,7 +125,7 @@ export default function Contact() {
               <p className="text-gray-400 text-sm">Have a question or want to work together? Fill out the form below.</p>
             </div>
             
-            <form action="" method="POST" className="space-y-6">
+            <form action="" method="POST" className="space-y-6" aria-label="Contact form">
               {/* Name Fields */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
