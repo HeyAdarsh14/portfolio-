@@ -29,10 +29,16 @@ export default function Contact() {
               
               {/* Email Card */}
               <div 
-                className="bg-[#0f1419] border border-gray-800 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300 group"
+                className="bg-[#0f1419] border border-gray-800 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300 group cursor-pointer"
                 role="button"
                 aria-label="Contact via email at adar3165@gmail.com"
                 tabIndex={0}
+                onClick={() => window.open('mailto:adar3165@gmail.com', '_blank')}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    window.open('mailto:adar3165@gmail.com', '_blank');
+                  }
+                }}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
@@ -52,10 +58,16 @@ export default function Contact() {
 
               {/* Location Card */}
               <div 
-                className="bg-[#0f1419] border border-gray-800 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300 group"
+                className="bg-[#0f1419] border border-gray-800 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300 group cursor-pointer"
                 role="button"
                 aria-label="Location: Delhi, India"
                 tabIndex={0}
+                onClick={() => window.open('https://www.google.com/maps/search/?api=1&query=Delhi,India', '_blank')}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    window.open('https://www.google.com/maps/search/?api=1&query=Delhi,India', '_blank');
+                  }
+                }}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
