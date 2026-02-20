@@ -20,6 +20,8 @@ const navigation = [
 ];
 
 export default function Hero() {
+  const [imageError, setImageError] = useState(false);
+  
   useEffect(() => {
     const theme = localStorage.getItem("theme") || "light";
     localStorage.setItem("theme", theme);
@@ -194,11 +196,18 @@ export default function Hero() {
             <div className="grid justify-center items-center order-1 lg:order-2">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-400/30 to-pink-500/30 rounded-full blur-3xl"></div>
-                <img
-                  src={pfp}
-                  alt="Adarsh Gupta"
-                  className="relative w-96 h-96 rounded-full object-cover drop-shadow-2xl border-4 border-white/10"
-                />
+                {imageError ? (
+                  <div className="relative w-96 h-96 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center drop-shadow-2xl border-4 border-white/10">
+                    <span className="text-white text-6xl font-bold">AG</span>
+                  </div>
+                ) : (
+                  <img
+                    src={pfp}
+                    alt="Adarsh Gupta"
+                    className="relative w-96 h-96 rounded-full object-cover drop-shadow-2xl border-4 border-white/10"
+                    onError={() => setImageError(true)}
+                  />
+                )}
               </div>
             </div>
           </div>
