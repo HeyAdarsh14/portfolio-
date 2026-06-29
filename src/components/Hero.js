@@ -19,6 +19,24 @@ const navigation = [
   { name: "Education", id: "education" },
 ];
 
+const socialLinks = [
+  {
+    label: "GitHub Profile",
+    href: "https://github.com/HeyAdarsh14",
+    mobileLabel: "GitHub",
+  },
+  {
+    label: "Coding Profile",
+    href: "https://codolio.com/profile/Heyadarsh",
+    mobileLabel: "Codolio",
+  },
+  {
+    label: "Resume",
+    href: "https://drive.google.com/drive/folders/1B2wITXwWCxsamGDWFyoG732ZeNgLMBUc",
+    mobileLabel: "Resume",
+  },
+];
+
 export default function Hero() {
   const [imageError, setImageError] = useState(false);
   
@@ -32,7 +50,7 @@ export default function Hero() {
     AOS.init({ duration: 2000 });
   }, []);
   return (
-    <div>
+    <div id="home">
       <header className="fixed bg-[#1e2530] shadow-2xl shadow-neutral inset-x-0 top-0 z-50">
         <nav
           className="flex items-center justify-between p-6 lg:px-8"
@@ -73,20 +91,18 @@ export default function Hero() {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-3">
-            <button 
-              onClick={() => window.open('https://github.com/HeyAdarsh14', '_blank')} 
-              className="px-4 py-2 border-2 border-purple-500 text-purple-400 rounded-full text-sm font-medium hover:bg-purple-500 hover:text-white transition-all duration-300"
-              aria-label="View GitHub profile (opens in new tab)"
-            >
-              Github Profile
-            </button>
-            <button 
-              onClick={() => window.open('https://codolio.com/profile/Heyadarsh', '_blank')} 
-              className="px-4 py-2 border-2 border-purple-500 text-purple-400 rounded-full text-sm font-medium hover:bg-purple-500 hover:text-white transition-all duration-300"
-              aria-label="View coding profile on Codolio (opens in new tab)"
-            >
-              Coding Profile
-            </button>
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 border-2 border-purple-500 text-purple-400 rounded-full text-sm font-medium hover:bg-purple-500 hover:text-white transition-all duration-300"
+                aria-label={`View ${link.label} in a new tab`}
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </nav>
         <Dialog
@@ -98,21 +114,19 @@ export default function Hero() {
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-2/3 overflow-y-auto bg-[#1e2530] px-6 py-6 sm:max-w-sm shadow-2xl">
             <div className="flex items-center justify-between">
-              <div className="-m-1.5 p-1.5 flex gap-x-2">
-                <button 
-                  onClick={() => window.open('https://github.com/HeyAdarsh14', '_blank')} 
-                  className="px-3 py-1.5 border-2 border-purple-500 text-purple-400 rounded-full text-xs font-medium"
-                  aria-label="GitHub profile"
-                >
-                  Github Profile
-                </button>
-                <button 
-                  onClick={() => window.open('https://codolio.com/profile/Heyadarsh', '_blank')} 
-                  className="px-3 py-1.5 border-2 border-purple-500 text-purple-400 rounded-full text-xs font-medium"
-                  aria-label="Coding profile"
-                >
-                  Coding Profile
-                </button>
+              <div className="-m-1.5 p-1.5 flex flex-wrap gap-x-2 gap-y-2">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 border-2 border-purple-500 text-purple-400 rounded-full text-xs font-medium"
+                    aria-label={`View ${link.label} in a new tab`}
+                  >
+                    {link.mobileLabel}
+                  </a>
+                ))}
               </div>
               <button
                 type="button"
@@ -136,6 +150,7 @@ export default function Hero() {
                       duration={500}
                       className="-mx-3 block rounded-lg px-3 py-2 font-semibold leading-7 text-gray-300 hover:bg-gray-800 hover:text-white transition-colors"
                       onClick={() => setMobileMenuOpen(false)}
+                      aria-label={`Scroll to ${item.name}`}
                     >
                       {item.name}
                     </Link>
@@ -186,10 +201,27 @@ export default function Hero() {
                 <p className="text-gray-400 text-base leading-relaxed mb-8 max-w-2xl">
                   I continuously strengthen my problem-solving skills through DSA practice and actively participate in hackathons and collaborative projects. I'm driven by learning through building, refining system design, and growing as a well-rounded software engineer.
                 </p>
-                <div className="flex items-start gap-x-4">
-                  <button onClick={() => window.open('https://drive.google.com/drive/folders/1B2wITXwWCxsamGDWFyoG732ZeNgLMBUc', '_blank')} className="px-8 py-3.5 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300">
+                <div className="flex flex-wrap items-start gap-3">
+                  <a
+                    href="https://drive.google.com/drive/folders/1B2wITXwWCxsamGDWFyoG732ZeNgLMBUc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-8 py-3.5 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300"
+                    aria-label="Check resume in a new tab"
+                  >
                     Check Resume
-                  </button>
+                  </a>
+                  <Link
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    className="px-8 py-3.5 border border-purple-500 text-purple-300 rounded-full font-semibold text-lg hover:bg-purple-500/10 transition-all duration-300 cursor-pointer"
+                    aria-label="Scroll to contact section"
+                  >
+                    Contact Me
+                  </Link>
                 </div>
               </div>
             </div>
@@ -206,6 +238,8 @@ export default function Hero() {
                     alt="Adarsh Gupta"
                     className="relative w-96 h-96 rounded-full object-cover drop-shadow-2xl border-4 border-white/10"
                     onError={() => setImageError(true)}
+                    loading="eager"
+                    decoding="async"
                   />
                 )}
               </div>
