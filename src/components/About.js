@@ -1,8 +1,4 @@
 import { useEffect } from "react";
-import {
-  AcademicCapIcon,
-  BriefcaseIcon,
-} from "@heroicons/react/20/solid";
 import AOS from "aos";
 import "aos/dist/aos.css";
 

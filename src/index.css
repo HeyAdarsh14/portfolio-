@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #0f1419;
+  color: #f9fafb;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(168, 85, 247, 0.35);
+  color: #ffffff;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

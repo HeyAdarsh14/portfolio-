@@ -4,6 +4,27 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Contact() {
+  const contactEmail = "adar3165@gmail.com";
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const senderName = formData.get("sender-name") || "";
+    const senderEmail = formData.get("sender-email") || "";
+    const subject = formData.get("payload-subject") || "Portfolio inquiry";
+    const message = formData.get("payload-data") || "";
+
+    const mailtoLink = `mailto:${contactEmail}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(
+      `Name: ${senderName}\nEmail: ${senderEmail}\n\n${message}`
+    )}`;
+
+    window.location.href = mailtoLink;
+    event.currentTarget.reset();
+  };
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -31,12 +52,12 @@ export default function Contact() {
               <div 
                 className="bg-[#0f1419] border border-gray-800 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300 group cursor-pointer"
                 role="button"
-                aria-label="Contact via email at adar3165@gmail.com"
+                aria-label={`Contact via email at ${contactEmail}`}
                 tabIndex={0}
-                onClick={() => window.open('mailto:adar3165@gmail.com', '_blank')}
+                onClick={() => window.open(`mailto:${contactEmail}`, '_blank')}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
-                    window.open('mailto:adar3165@gmail.com', '_blank');
+                    window.open(`mailto:${contactEmail}`, '_blank');
                   }
                 }}
               >
@@ -47,7 +68,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-xs uppercase tracking-wider text-gray-500 font-mono mb-1">SYSTEM.MAIL</p>
-                      <p className="text-white font-medium">adar3165@gmail.com</p>
+                      <p className="text-white font-medium">{contactEmail}</p>
                     </div>
                   </div>
                   <svg className="w-5 h-5 text-gray-600 group-hover:text-purple-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -137,7 +158,7 @@ export default function Contact() {
               <p className="text-gray-400 text-sm">Have a question or want to work together? Fill out the form below.</p>
             </div>
             
-            <form action="" method="POST" className="space-y-6" aria-label="Contact form">
+            <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
               {/* Name Fields */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>

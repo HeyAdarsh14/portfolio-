@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import About from "./components/About";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import Achievements from "./components/Achievements";
@@ -13,8 +14,9 @@ import BharatYaatriProject from "./components/BharatYaatriProject";
 // Home page component
 function HomePage() {
   return (
-    <div className="overflow-x-hidden">
+    <div id="top" className="overflow-x-hidden">
       <Hero />
+      <About />
       <Projects />
       <Skills />
       <Experience />
